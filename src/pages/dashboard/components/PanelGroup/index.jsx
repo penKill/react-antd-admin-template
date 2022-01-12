@@ -5,25 +5,25 @@ import "./index.less";
 
 const chartList = [
   {
-    type: "New Visits",
+    type: "用户访问量",
     icon: "user",
     num: 102400,
     color: "#40c9c6",
   },
   {
-    type: "Messages",
+    type: "未读消息",
     icon: "message",
     num: 81212,
     color: "#36a3f7",
   },
   {
-    type: "Purchases",
+    type: "收入",
     icon: "pay-circle",
     num: 9280,
     color: "#f4516c",
   },
   {
-    type: "Shoppings",
+    type: "购物车数量",
     icon: "shopping-cart",
     num: 13600,
     color: "#f6ab40",

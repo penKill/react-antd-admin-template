@@ -8,12 +8,12 @@ import { getMenuItemInMenuListByProperty } from "@/utils";
 import routeList from "@/config/routeMap";
 import menuList from "@/config/menuConfig";
 const { Content } = Layout;
-
+//浏览器的抬头标题
 const getPageTitle = (menuList, pathname) => {
   let title = "Ant Design Pro";
   let item = getMenuItemInMenuListByProperty(menuList, "path", pathname);
   if (item) {
-    title = `${item.title} - Ant Design Pro`;
+    title = item.title;
   }
   return title;
 };

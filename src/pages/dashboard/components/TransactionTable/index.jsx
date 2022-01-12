@@ -4,20 +4,20 @@ import { transactionList } from "@/api/remoteSearch";
 
 const columns = [
   {
-    title: "Order_No",
+    title: "订单编号",
     dataIndex: "order_no",
     key: "order_no",
     width: 200,
   },
   {
-    title: "Price",
+    title: "价格",
     dataIndex: "price",
     key: "price",
     width: 195,
     render: text => (`$${text}`),
   },
   {
-    title: "Status",
+    title: "状态",
     key: "tag",
     dataIndex: "tag",
     width: 100,
@@ -37,7 +37,7 @@ class TransactionTable extends Component {
   fetchData = () => {
     transactionList().then((response) => {
       const list = response.data.data.items.slice(0, 13);
-      if (this._isMounted) { 
+      if (this._isMounted) {
         this.setState({ list });
       }
     });
