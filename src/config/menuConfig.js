@@ -10,12 +10,6 @@ const menuList = [
     roles:["admin","editor","guest"]
   },
   {
-    title: "开发文档",
-    path: "/doc",
-    icon: "file",
-    roles:["admin","editor","guest"]
-  },
-  {
     title: "引导页",
     path: "/guide",
     icon: "key",
@@ -165,12 +159,6 @@ const menuList = [
     path: "/user",
     icon: "usergroup-add",
     roles:["admin"]
-  },
-  {
-    title: "关于作者",
-    path: "/about",
-    icon: "user",
-    roles:["admin","editor","guest"]
   },
   {
     title: "Bug收集",

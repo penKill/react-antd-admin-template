@@ -76,7 +76,7 @@
 │   ├─ store                  # 全局 store管理
 │   ├─ styles                 # 全局样式
 │   ├─ utils                  # 全局公用方法
-│   ├─ views                  # views 所有页面
+│   ├─ pages                  # pages 所有页面
 │   ├─ App.js                 # 入口页面
 │   ├─ defaultSettings.js     # 全局默认配置
 │   └─index.js                # 源码入口

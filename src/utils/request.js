@@ -5,13 +5,13 @@ import { getToken } from "@/utils/auth";
 import { logout } from "@/store/actions";
 
 //创建一个axios示例
-const service = axios.create({
+const api = axios.create({
   baseURL: process.env.REACT_APP_BASE_API, // api 的 base_url
   timeout: 5000, // request timeout
 });
 
 // 请求拦截器
-service.interceptors.request.use(
+api.interceptors.request.use(
   (config) => {
     // Do something before request is sent
     if (store.getState().user.token) {
@@ -28,7 +28,7 @@ service.interceptors.request.use(
 );
 
 // 响应拦截器
-service.interceptors.response.use(
+api.interceptors.response.use(
   (response) => response,
   /**
    * 下面的注释为通过在response里，自定义code来标示请求状态
@@ -86,4 +86,4 @@ service.interceptors.response.use(
   }
 );
 
-export default service;
+export default api;
