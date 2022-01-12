@@ -1,7 +1,7 @@
-import request from '@/utils/request'
+import api from '@/utils/request'
 export function excelList() {
-  return request({
-    url: '/excel/list',
-    method: 'get'
-  })
+  // return request({
+  //   url: '/excel/list',
+  //   method: 'get'
+  // })
 }
