@@ -105,6 +105,7 @@ api.get = (url, params) => {
  * @returns {Promise<AxiosResponse<any>>}
  */
 api.post = (url, data) => {
+  console.log(instance)
   return instance.post(url, data)
 }
 export default api;
