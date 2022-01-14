@@ -1,11 +1,12 @@
 import request from '@/utils/request'
-
+import api from '@/utils/api'
+/**
+ * 获取用户信息
+ * @param {} data 
+ * @returns 
+ */
 export function reqUserInfo(data) {
-  return request({
-    url: '/userInfo',
-    method: 'post',
-    data
-  })
+  return api.get('/user/user-info');
 }
 
 export function getUsers() {

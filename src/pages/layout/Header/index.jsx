@@ -20,6 +20,7 @@ const LayoutHeader = (props) => {
     showSettings,
     fixedHeader,
   } = props;
+  console.log("LayoutHeader")
   token && getUserInfo(token);
   const handleLogout = (token) => {
     Modal.confirm({

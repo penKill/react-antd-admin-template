@@ -1,17 +1,18 @@
 import * as types from "../action-types";
 import { reqUserInfo } from "@/api/user";
+import res from '@/utils/res'
 
-export const getUserInfo = (token) => (dispatch) => {
+export const getUserInfo = () => (dispatch) => {
   return new Promise((resolve, reject) => {
-    reqUserInfo(token)
+    reqUserInfo()
       .then((response) => {
         const { data } = response;
-        if (data.status === 0) {
+        if (res.ok(data)) {
           const userInfo = data.userInfo;
           dispatch(setUserInfo(userInfo));
           resolve(data);
         } else {
-          const msg = data.message;
+          const msg = res.message(data);
           reject(msg);
         }
       })
