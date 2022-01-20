@@ -8,7 +8,7 @@ export const getUserInfo = () => (dispatch) => {
       .then((response) => {
         const { data } = response;
         if (res.ok(data)) {
-          const userInfo = data.userInfo;
+          const userInfo = data.data;
           dispatch(setUserInfo(userInfo));
           resolve(data);
         } else {

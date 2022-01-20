@@ -14,10 +14,12 @@ export default function user(state = initUserInfo, action) {
         token: action.token
       };
     case types.USER_SET_USER_INFO:
+      console.log('user',state);
+      console.log('action',action);
       return {
         ...state,
-        name: action.name,
-        role: action.role,
+        name: action.user.username,
+        role: action.roleList,
         avatar: action.avatar,
       };
     case types.USER_RESET_USER:

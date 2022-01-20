@@ -10,9 +10,7 @@ import storage from '@/utils/storage';
 
 const Login = (props) => {
     const {form, login, getUserInfo} = props;
-    console.log('login',props)
     const {getFieldDecorator} = form;
-
     const [loading, setLoading] = useState(false);
 
     const handleLogin = (username, password) => {
@@ -20,19 +18,22 @@ const Login = (props) => {
         setLoading(true);
         login(username, password)
             .then((data) => {
+                storage.setToken('123121')
                 message.success("登录成功");
-                handleUserInfo(data.token);
+                handleUserInfo();
             })
             .catch((error) => {
                 setLoading(false);
                 message.error(error);
+                console.log('error'+error);
+
             });
     };
 
     // 获取用户信息
-    const handleUserInfo = (token) => {
+    const handleUserInfo = () => {
         console.log('handleUserInfo')
-        getUserInfo(token)
+        getUserInfo()
             .then((data) => {
             })
             .catch((error) => {

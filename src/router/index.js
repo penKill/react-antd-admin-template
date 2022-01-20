@@ -8,8 +8,7 @@ import storage from '@/utils/storage';
 
 class Router extends React.Component {
     render() {
-        console.log(this.props)
-        const {role, getUserInfo} = this.props;
+        const {role, getUserInfo} = this.props
         return (
             <HashRouter>
                 <Switch>
@@ -18,10 +17,8 @@ class Router extends React.Component {
                         path="/"
                         render={() => {
                             if (!storage.getToken()) {
-                                console.log('调转')
                                 return <Redirect to="/login"/>;
                             } else {
-                                console.log('不用调转')
                                 if (role) {
                                     return <Layout/>;
                                 } else {
